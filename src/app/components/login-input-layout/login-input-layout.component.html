@@ -1,0 +1,12 @@
+<div class="login-container">
+	<div class="form-input">
+		<label [for]="inputName">{{ inputLabel }}</label>
+		<input
+			[placeholder]="placeholder"
+			[id]="inputName"
+			[type]="inputType"
+			[value]="value"
+		/>
+	</div>
+	<ng-content></ng-content>
+</div>

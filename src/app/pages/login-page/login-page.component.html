@@ -1,0 +1,33 @@
+<app-login-default-layout
+	tittle="Welcome back"
+	subtittle="Welcome back! Please enter your details."
+	(submit)="submit()"
+	[disablePrimaryButton]="!loginForm.valid"
+>
+	<form (ngSubmit)="submit()" [formGroup]="loginForm">
+		<app-login-inupt-layout
+			placeholder="Enter your email"
+			formGroupName="email"
+			inputLabel="Email"
+			inputType="email"
+			inputName="email"
+			formName="email"
+		>
+		</app-login-inupt-layout>
+		<app-login-inupt-layout
+			placeholder="Enter your password"
+			formGroupName="password"
+			inputLabel="Password"
+			inputType="password"
+			inputName="password"
+		>
+			<div class="checkboxWrapper">
+				<div>
+					<input type="checkbox" />
+					<span>Remember me</span>
+				</div>
+				<span>Forgot password</span>
+			</div>
+		</app-login-inupt-layout>
+	</form>
+</app-login-default-layout>
