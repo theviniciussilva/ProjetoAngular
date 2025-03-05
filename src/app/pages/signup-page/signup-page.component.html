@@ -1,14 +1,14 @@
 <app-login-default-layout
-	tittle="Welcome back"
-	subtittle="Welcome back! Please enter your details."
+	tittle="First Time"
+	subtittle="First Time! Please enter your details."
 	(submit)="submit()"
-	[disablePrimaryButton]="!loginForm.valid"
-	primaryButtonText="Login"
+	[disablePrimaryButton]="!signupForm.valid"
+	primaryButtonText="Signup"
 	(navigate)="navigate()"
-	spanText="Don't have an account?"
-	spanButton="Sign up for free!"
+	spanText="Already have an account?"
+	spanButton="Login for free!"
 >
-	<form (ngSubmit)="submit()" [formGroup]="loginForm">
+	<form (ngSubmit)="submit()" [formGroup]="signupForm">
 		<app-login-input-layout
 			placeholder="Enter your email"
 			formControlName="email"
@@ -24,13 +24,14 @@
 			inputType="password"
 			inputName="password"
 		>
-			<div class="checkboxWrapper">
-				<div>
-					<input type="checkbox" />
-					<span>Remember me</span>
-				</div>
-				<span><button>Forgot password</button></span>
-			</div>
+		</app-login-input-layout>
+		<app-login-input-layout
+			placeholder="Confirm your Password"
+			formControlName="password"
+			inputLabel="Confirm your Password"
+			inputType="password"
+			inputName="password"
+		>
 		</app-login-input-layout>
 	</form>
 </app-login-default-layout>

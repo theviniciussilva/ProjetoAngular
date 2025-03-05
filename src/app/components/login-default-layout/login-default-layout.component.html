@@ -2,7 +2,6 @@
 	<section class="primary-section">
 		<h1>{{ tittle }}</h1>
 		<h2>{{ subtittle }}</h2>
-		<!-- switch for dinamic code -->
 		<ng-content></ng-content>
 		<div class="buttonWrapper">
 			<button
@@ -10,15 +9,17 @@
 				(click)="submit()"
 				class="primary-btn"
 			>
-				Login
+				{{ primaryButtonText }}
 			</button>
 			<button class="secondary-btn">
 				<img src="Google.svg" alt="GOOGLE ICON" />Sign in with Google
 			</button>
 		</div>
 		<div class="spanWrapper">
-			<span>Don't have an account?</span>
-			<span><button>Sign up for free!</button></span>
+			<span>{{ spanText }}</span>
+			<span
+				><button (click)="navigate()">{{ spanButton }}</button></span
+			>
 		</div>
 	</section>
 	<section class="secondary-section">

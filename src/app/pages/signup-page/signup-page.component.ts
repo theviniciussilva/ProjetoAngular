@@ -11,7 +11,7 @@ import { Router } from '@angular/router'
 import { LoginPageService } from '../../services/login-page.service'
 import { ToastrService } from 'ngx-toastr'
 
-export interface LoginForm {
+export interface SignupForm {
 	email: FormControl
 	password: FormControl
 }
@@ -24,18 +24,18 @@ export interface LoginForm {
 		ReactiveFormsModule,
 	],
 	providers: [LoginPageService],
-	templateUrl: './login-page.component.html',
-	styleUrl: './login-page.component.scss',
+	templateUrl: './signup-page.component.html',
+	styleUrl: './signup-page.component.scss',
 })
-export class LoginPageComponent {
-	loginForm!: FormGroup<LoginForm>
+export class SignupPageComponent {
+	signupForm!: FormGroup<SignupForm>
 
 	constructor(
 		private router: Router,
 		private loginService: LoginPageService,
 		private toastService: ToastrService,
 	) {
-		this.loginForm = new FormGroup({
+		this.signupForm = new FormGroup({
 			email: new FormControl('', [Validators.required, Validators.email]),
 			password: new FormControl('', [
 				Validators.required,
@@ -46,7 +46,7 @@ export class LoginPageComponent {
 
 	submit() {
 		this.loginService
-			.login(this.loginForm.value.email, this.loginForm.value.password)
+			.login(this.signupForm.value.email, this.signupForm.value.password)
 			.subscribe({
 				next: () => this.toastService.success('Login realizado com sucesso'),
 				error: () =>
@@ -56,6 +56,6 @@ export class LoginPageComponent {
 			})
 	}
 	navigate() {
-		this.router.navigate(['signup'])
+		this.router.navigate([''])
 	}
 }
