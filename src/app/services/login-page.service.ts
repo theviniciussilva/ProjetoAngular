@@ -6,15 +6,34 @@ import { tap } from 'rxjs'
 @Injectable({
 	providedIn: 'root',
 })
-export class LoginPageService {
-	constructor(private http: HttpClient) {}
+export class LoginService {
+	apiUrl: string = 'http://localhost:8080/auth'
+
+	constructor(private httpClient: HttpClient) {}
 
 	login(email: string, password: string) {
-		//estende uma função
-		return this.http.post<LoginResponse>('/login', { email, password }).pipe(
-			tap((value) => {
-				sessionStorage.setItem('auth-token', value.token)
-			}),
-		)
+		return this.httpClient
+			.post<LoginResponse>(
+				this.apiUrl + '/login',
+				{ email, password },
+				{ withCredentials: true },
+			)
+			.pipe(
+				tap((value) => {
+					sessionStorage.setItem('auth-token', value.token)
+					sessionStorage.setItem('username', value.name)
+				}),
+			)
+	}
+
+	signup(name: string, email: string, password: string) {
+		return this.httpClient
+			.post<LoginResponse>(this.apiUrl + '/signup', { name, email, password })
+			.pipe(
+				tap((value) => {
+					sessionStorage.setItem('auth-token', value.token)
+					sessionStorage.setItem('username', value.name)
+				}),
+			)
 	}
 }

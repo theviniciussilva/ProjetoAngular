@@ -10,6 +10,14 @@
 >
 	<form (ngSubmit)="submit()" [formGroup]="signupForm">
 		<app-login-input-layout
+			placeholder="Enter your name"
+			formControlName="name"
+			inputLabel="Name"
+			inputType="text"
+			inputName="name"
+		>
+		</app-login-input-layout>
+		<app-login-input-layout
 			placeholder="Enter your email"
 			formControlName="email"
 			inputLabel="Email"
