@@ -1,59 +1,34 @@
-# AngularLoginPagev2
+# Objetivo
+Este projeto simula um e-commerce, permitindo ao usuário explorar uma variedade de restaurantes, avaliações e pratos exclusivos. Desenvolvido com React, ele integra tecnologias modernas e oferece uma experiência de usuário fluida e envolvente. Este projeto demonstra minha habilidade em integrar diversas tecnologias e desenvolver soluções completas.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.5.
+# Tecnologias utilizadas
 
-## Development server
+* Html
+* Css
+* Typescript
+* Formik
+* Yup
+* React
+* Redux
 
-To start a local development server, run:
+# Metodologia
 
-```bash
-ng serve
-```
+* Integração com API e Gerenciamento de Estado:
+Os dados dos restaurantes, avaliações e pratos são obtidos via API utilizando métodos HTTP integrados com o Redux Toolkit Query. Isso possibilita a manipulação do estado global, garantindo que os produtos permaneçam no carrinho independentemente da página em que o usuário esteja.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+* Navegação Intuitiva:
+Utilizando React Router, implementei uma navegação fluida entre os restaurantes, proporcionando transições suaves e uma experiência consistente para o usuário.
 
-## Code scaffolding
+* Processo de Compra:
+Ao final do fluxo, há um método de compra validado que envia os dados cadastrados por meio de uma requisição POST para a API, garantindo que a finalização da compra seja realizada de forma segura e organizada.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+# Como Executar
+* 1 - Clone o repositório.
+* 2 - Instale as dependências.
+* 3 - Inicialize a aplicação.
+* 4 - Clone o repositório da API
+* 5 - Execute a aplicação.
+* 6 - Faça tanto cadastro quanto login
 
-```bash
-ng generate component component-name
-```
+# Link da API
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
