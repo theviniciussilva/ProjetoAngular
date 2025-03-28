@@ -1,34 +1,32 @@
 # Objetivo
-Este projeto simula um e-commerce, permitindo ao usuário explorar uma variedade de restaurantes, avaliações e pratos exclusivos. Desenvolvido com React, ele integra tecnologias modernas e oferece uma experiência de usuário fluida e envolvente. Este projeto demonstra minha habilidade em integrar diversas tecnologias e desenvolver soluções completas.
+Este projeto foi um dos mais desafiadores, o intuito desse projeto era de fazer uma aplicação de login com integração de api e aprender alternativas de tecnologias para o mercado de trabalho, para o front end utilizei o framework Angular, aprendendo do zero sobre seus fundamentos, services, http client e entre outras coisas lendo a documentação.
+Na parte de Back-End utilizei Java como linguagem principal, outras tecnologias que foram utilizadas foram Spring boot, Spring security e JWT. Todo o processo de aprendizado foi muito desafiador, mas muito gratificante.
+
 
 # Tecnologias utilizadas
 
 * Html
-* Css
+* Sass
 * Typescript
-* Formik
-* Yup
-* React
-* Redux
+* Angular
+* Java
+* Spring Boot
+* Spring security
 
-# Metodologia
-
-* Integração com API e Gerenciamento de Estado:
-Os dados dos restaurantes, avaliações e pratos são obtidos via API utilizando métodos HTTP integrados com o Redux Toolkit Query. Isso possibilita a manipulação do estado global, garantindo que os produtos permaneçam no carrinho independentemente da página em que o usuário esteja.
-
-* Navegação Intuitiva:
-Utilizando React Router, implementei uma navegação fluida entre os restaurantes, proporcionando transições suaves e uma experiência consistente para o usuário.
-
-* Processo de Compra:
-Ao final do fluxo, há um método de compra validado que envia os dados cadastrados por meio de uma requisição POST para a API, garantindo que a finalização da compra seja realizada de forma segura e organizada.
+# Funcionalidades: 
+As funções que minha aplicação oferece são simples mas porém eficazes sendo elas:
+* Cadastro;
+* Login
 
 # Como Executar
 * 1 - Clone o repositório.
-* 2 - Instale as dependências.
-* 3 - Inicialize a aplicação.
+* 2 - Instale as dependências. ( Npm install )
+* 3 - Inicialize a aplicação. ( Npm start )
+* 
 * 4 - Clone o repositório da API
 * 5 - Execute a aplicação.
-* 6 - Faça tanto cadastro quanto login
+* 6 - Faça tanto cadastro quanto login!
 
 # Link da API
+https://github.com/theviniciussilva/ProjetoAngularAPI
 
